@@ -1,7 +1,7 @@
 import express from 'express'
 
 const app = express()
-const port = process.env.PORT || 3000;
+const port = process.env.PORT;
 
 app.get('/', (req,res) => {
 	res.send('Server is Ready!')
@@ -36,6 +36,8 @@ app.get('/jokes',(req,res) => {
 	        "flirty_lines": "You're as beautiful as the moonlit night, casting enchantment wherever you go."
 	    }
 	]
+
+	res.send(jokes);
 
 })
 
